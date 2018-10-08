@@ -1,0 +1,51 @@
+.containers {
+  display: grid;
+  grid-gap 10%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "statistics statistics "
+  "cities cities "
+  "comedian-data comedian-data ";
+  grid-gap: 10px;
+
+}
+
+.statistics {
+  grid-column-end: span 4;
+  text-align: center;
+  grid-area: statistics;
+}
+
+.cities {
+  text-align: center;
+  grid-area: cities;
+}
+
+.comedian-data {
+  text-align: center;
+  grid-area: comedian-data;
+}
+
+.box {
+  margin: 0;
+  width:100%;
+  background-image: linear-gradient(to right, #ffe259, #ffa751);
+  height: 340px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+#image {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+#stats {
+  font-size: 50px;
+}
+
+#cities {
+  font-size: 50px;
+}
