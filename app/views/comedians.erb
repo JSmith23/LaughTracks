@@ -1,0 +1,29 @@
+<div class="containers">
+  <div class="statistics">
+<h2 id="stats">Statistics</h2>
+    <h3>Average Age: <%= @comedians.avg_age %></h3>
+    <h3>Average Run Length: <%= @specials.avg_run_length %></h3>
+    <h3>Total Specials Count: <%= @specials.count %></h3>
+</div>
+
+  <div class="cities">
+    <h3 id="cities">Comedian Origins</h3>
+    <% @comedians.cities.each do |city| %>
+      <h3> <%= city.city %></h3>
+    <% end %>
+  </div>
+
+<% @comedians.each do |comedian| %>
+<div class="comedian-data box">
+  <h3><%= comedian.name %></h3>
+  <h3>Age: <%= comedian.age%></h3>
+  <h3>City: <%= comedian.city%></h3>
+
+<% comedian.specials.each do |special| %>
+<h3><%= special.name %></h3>
+<img id="image" src="<%= special.image_url %>"/>
+<h3><%= special.run_length%> min</h3>
+<% end %>
+<% end %>
+</div>
+</div>
